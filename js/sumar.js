@@ -1,5 +1,11 @@
-    function sumar (numero1,numero2){
-        console.log("la suma es:"+(numero1+numero2))
+    function saludar (nombre){
+        console.log("la suma es:"+nombre)
     }
+    let nombre = "juan comodoro";
+    nombre="jommelios";
+    nombre=nombre+" pumarejo"
+    console.log(nombre);
+    saludar("catalina");
+    let porcentaje=0.5;
 
-    sumar (5,5)
+    
