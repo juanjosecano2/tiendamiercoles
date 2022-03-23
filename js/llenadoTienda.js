@@ -120,18 +120,48 @@ productos.forEach(function (producto) {
   btncard.classList.add("btn");
   btncard.classList.add("btn-outline-dark");
   btncard.classList.add("mt-auto");
-  btncard.textContent = "Add to cart";
+  btncard.textContent = "Ampliar";
+  
+  
 
   //padres e hijos
 
   tarjeta.appendChild(foto);
   tarjeta.appendChild(cardbody);
+  tarjeta.appendChild(cardfooter);
+
   cardbody.appendChild(titulo);
   cardbody.appendChild(precio);
   cardbody.appendChild(description);
-  tarjeta.appendChild(cardfooter);
+
   cardfooter.appendChild(lugarbtn);
   lugarbtn.appendChild(btncard);
+
   columna.appendChild(tarjeta);
+
   fila.appendChild(columna);
 });
+
+//
+
+let filaContenedor=document.getElementById("fila")
+filaContenedor.addEventListener("click",function(evento){
+  if (evento.target.classList.contains("btn")) {
+
+    console.log(evento.target.parentElement.parentElement.parentElement.querySelector("h6".textContent))
+    console.log(evento.target.parentElement.parentElement.parentElement.querySelector("img".src))
+
+    let fotoinfo = document.getElementById("fotoinfo");
+    fotoinfo.classList.add("card-img-top");
+    fotoinfo.src = producto.foto;
+    
+
+    let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+    modalinfo.show()
+    
+  }
+
+
+})
+
+
