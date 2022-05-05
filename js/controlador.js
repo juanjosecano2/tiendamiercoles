@@ -7,13 +7,13 @@ llenartienda()
     //llamar modal
 let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
 let modalcompra = new bootstrap.Modal(document.getElementById('resumencompra'))
+
     //rutina para ampliar info
 let filaContenedor = document.getElementById("fila")
 filaContenedor.addEventListener("click", function(evento) {
     if (evento.target.classList.contains("btn")) {
 
         producto = ampliarinformacionproducto(evento)
-        console.log(producto)
         modalinfo.show()
 
     }
@@ -68,6 +68,7 @@ vercarrito.addEventListener("click", function() {
     //recorrer el carrito y pintar los productos
     let base = document.getElementById("basecarro")
     let totalPesos = document.getElementById("totalpesos")
+    let totales = []
     base.innerHTML = ""
 
     carrito.forEach(function(producto) {
@@ -103,13 +104,15 @@ vercarrito.addEventListener("click", function() {
         let resultado = Number(producto.precio) * Number(producto.cantidad);
         subtotal.textContent = resultado;
 
+        
         producto.subtotal = resultado
-        carrito.push(producto)
-
+        console.log("hola")
+        totales.push(producto)
+        console.log(totales)
 
         let TotalnetoPesos = 0;
-        carrito.forEach(item => {
-            TotalnetoPesos = TotalnetoPesos + Number(item.precio);
+        totales.forEach(item => {
+            TotalnetoPesos = TotalnetoPesos + Number(item.subtotal);
 
         });
 
@@ -117,6 +120,8 @@ vercarrito.addEventListener("click", function() {
 
         let filatotal = document.createElement("div");
         filatotal.classList.add("row", "my-3");
+
+        
 
 
 

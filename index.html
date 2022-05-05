@@ -39,6 +39,11 @@
                             href="#about">Nosotros</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="#contact">Contáctanos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="btn btn-primary nav-link py-3 px-0 px-lg-3 rounded"
+                             id="registro" >Registro</a></li>
+                             <li class="nav-item mx-0 mx-lg-1"><a class="btn btn-primary nav-link py-3 px-0 px-lg-3 rounded"
+                                id="registro" >Ingresar</a></li>        
+                    
                 </ul>
             </div>
         </div>
@@ -384,10 +389,44 @@
             </div>
         </div>
     </div>
+    <!-- Portfolio Modal registro-->
+    <div class="modal fade" id="modalregistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                    <label for="emailAddress">Email</label>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="password" type="password" placeholder="Password" data-sb-validations="required,email" />
+                    <label for="emailAddress">Contraseña</label>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Password Address is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Password Address Email is not valid.</div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="botonregistro">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scriptsNewindex.js"></script>
+    <script src="js/controlador.js" type="module"></script>
+    <script src="js/registro.js" type="module"></script>
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/firebaseregister.js" type="module"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

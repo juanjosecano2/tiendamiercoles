@@ -66,7 +66,7 @@ export function llenartienda() {
     ];
     //como recorrer un arreglo con js
     //1.creo una variable para almacenar la base sobre la cual voy a pintar
-    console.log(productos)
+    
 
     // CREO UNA VARIABLE PARA ALMACENAR LA BASE SOBRE LA QUE PINTAR
     let fila = document.getElementById("fila")
